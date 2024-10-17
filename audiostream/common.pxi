@@ -8,7 +8,7 @@ ctypedef unsigned short uint16_t
 cdef extern from "Python.h":
     void PyEval_InitThreads()
 
-cdef extern from "SDL2.h" nogil:
+cdef extern from "SDL2/SDL.h" nogil:
     struct SDL_AudioSpec:
         int freq
         uint16_t format
@@ -64,7 +64,7 @@ cdef extern from "SDL2.h" nogil:
     void SDL_LockAudio()
     void SDL_UnlockAudio()
 
-cdef extern from "SDL2_mixer.h" nogil:
+cdef extern from "SDL2/SDL_mixer.h" nogil:
     struct Mix_Chunk:
         pass
     int Mix_Init(int)
