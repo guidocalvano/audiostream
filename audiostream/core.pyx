@@ -13,6 +13,8 @@ __all__ = (
     'AudioInput',
     'AudioSample',
     'AudioException')
+import pyximport
+pyximport.install()
 
 DEF SDL_INIT_AUDIO = 0x10
 DEF MIX_CHANNELS_MAX = 32
