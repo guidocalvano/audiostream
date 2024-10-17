@@ -15,6 +15,7 @@ __version__ = (0, 2)
 
 __all__ = ('get_output', 'get_input', 'get_input_sources', 'AudioOutput',
     'AudioInput', 'AudioSample', 'AudioException')
-
+import pyximport
+pyximport.install()
 from audiostream.core import *
 
